@@ -1,4 +1,3 @@
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -6,9 +5,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         format = {"pretty", "html:target/cucumber"},
-        features = {"classpath:features/purse.feature"}
+        features = {"classpath:features/malaymoneyfactory.feature"}
 )
-public class MoneyFactoryUAT {
+public class MalayMoneyFacUAT {
 
 
 

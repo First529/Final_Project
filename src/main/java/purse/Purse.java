@@ -15,7 +15,7 @@ import purse.strategy.*;
  */
 public class Purse {
     /** Collection of objects in the purse. */
-    private List<Valuable> money;
+    public List<Valuable> money;
 
     WithdrawStrategy strategy;
 
@@ -65,7 +65,7 @@ public class Purse {
      * @return the capacity
      */
     public int getCapacity() {
-        return this.capacity;
+        return this.capacity - money.size();
     }
 
     /**
@@ -131,6 +131,9 @@ public class Purse {
             return null;
 
         List<Valuable> templist = strategy.withdraw(amount, money);
+        for (Valuable v : templist) {
+            money.remove(v);
+        }
 
         Valuable[] array = new Valuable[templist.size()];
         templist.toArray(array);

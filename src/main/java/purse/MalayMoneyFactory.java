@@ -12,7 +12,7 @@ public class MalayMoneyFactory extends MoneyFactory {
     @Override
     public Valuable createMoney(double value) {
         if (isCoin(value)) {
-            return new Coin(value, "Ringgit");
+            return new Coin(value, "Sen");
         }
         else if (isBankNote(value)) {
             return new BankNote(value, "Ringgit", malaySerial);
